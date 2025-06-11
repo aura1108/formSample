@@ -11,7 +11,7 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsString, IsOptional, MaxLength } from "class-validator";
+import { IsDate, IsString, MaxLength } from "class-validator";
 import { Type } from "class-transformer";
 
 @ObjectType()
@@ -25,15 +25,12 @@ class FormSubmission {
   createdAt!: Date;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: String,
   })
   @IsString()
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  email!: string | null;
+  @Field(() => String)
+  email!: string;
 
   @ApiProperty({
     required: true,
@@ -53,28 +50,22 @@ class FormSubmission {
   name!: string;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: String,
   })
   @IsString()
   @MaxLength(1000)
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  pan!: string | null;
+  @Field(() => String)
+  pan!: string;
 
   @ApiProperty({
-    required: false,
+    required: true,
     type: String,
   })
   @IsString()
   @MaxLength(1000)
-  @IsOptional()
-  @Field(() => String, {
-    nullable: true,
-  })
-  phone!: string | null;
+  @Field(() => String)
+  phone!: string;
 
   @ApiProperty({
     required: true,

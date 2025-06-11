@@ -1,9 +1,9 @@
 export type FormSubmission = {
   createdAt: Date;
-  email: string | null;
+  email: string;
   id: string;
   name: string;
-  pan: string | null;
-  phone: string | null;
+  pan: string;
+  phone: string;
   updatedAt: Date;
 };

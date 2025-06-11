@@ -9,10 +9,10 @@ generator client {
 
 model FormSubmission {
   createdAt DateTime @default(now())
-  email     String?  @unique
+  email     String   @unique
   id        String   @id @default(cuid())
-  name      String   @unique
-  pan       String?
-  phone     String?
+  name      String
+  pan       String   @unique
+  phone     String
   updatedAt DateTime @updatedAt
 }

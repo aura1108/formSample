@@ -24,7 +24,7 @@ class FormSubmissionUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  email?: string | null;
+  email?: string;
 
   @ApiProperty({
     required: false,
@@ -48,7 +48,7 @@ class FormSubmissionUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  pan?: string | null;
+  pan?: string;
 
   @ApiProperty({
     required: false,
@@ -60,7 +60,7 @@ class FormSubmissionUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
-  phone?: string | null;
+  phone?: string;
 }
 
 export { FormSubmissionUpdateInput as FormSubmissionUpdateInput };

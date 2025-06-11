@@ -1,6 +1,6 @@
 export type FormSubmissionUpdateInput = {
-  email?: string | null;
+  email?: string;
   name?: string;
-  pan?: string | null;
-  phone?: string | null;
+  pan?: string;
+  phone?: string;
 };
